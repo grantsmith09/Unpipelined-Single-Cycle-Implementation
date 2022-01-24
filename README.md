@@ -41,3 +41,5 @@ between the beginning of MEM and the beginning of EX.
 ● All branches should be predicted not-taken. This means that the pipeline should
 continue to execute sequentially until the branch resolves, and then squash instructions
 after the branch if the branch was actually taken.
+
+
