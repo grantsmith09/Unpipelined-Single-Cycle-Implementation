@@ -4,20 +4,20 @@ resemblances with the MIPS R2000 described in the textbook. The major difference
 smaller instruction set and 16-bit words for the WISC-SP13. Similarities include a load/store
 architecture and three fixed-length instruction formats.
 
-Registers
+# Registers
 There are eight user registers, R0-R7. Unlike the MIPS R2000, R0 is not always zero. Register
 R7 is used as the link register for JAL or JALR instructions. The program counter is separate
 from the user register file. A special register named EPC is used to save the current PC upon an
 exception or interrupt invocation.
 
-Memory System
+# Memory System
 The WISC-SP13 is a Harvard architecture, meaning instructions and data are located in
 different physical memories. It is byte-addressable, word aligned* (where a word is 16 bits long),
 and big-endian. The final version of the WISC-SP13 will include a multi-cycle memory and
 level-1 cache. However, initial versions of the machine will contain a single cycle memory.
 (More details will be provided as reach the corresponding stage)
 
-Pipeline
+# Pipeline
 The final version of the WISC-SP13 contains a five stage pipeline identical to the MIPS R2000.
 The stages are:
 ● Instruction Fetch (IF)
@@ -26,7 +26,7 @@ The stages are:
 ● Memory Access (MEM)
 ● Write Back (WB)
 
-Optimizations
+# Optimizations
 Your goal in optimizations is to reduce the CPI of the processor or the total cycles taken to
 execute a program. While the primary concern of the WISC-SP13 is correct functionality, the
 architecture must still have a reasonable clock period. Therefore, you may not have more than
